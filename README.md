@@ -19,3 +19,54 @@ Properties of Recursion:
 
 CODE:-
 
+15a
+```
+#include <iostream>
+using namespace std;
+int add(int n)
+{
+    if (n<=1)
+    {
+        return 1;
+    }
+    else
+    {
+        return (n+add(n-1));
+    }
+}
+int main()
+{
+    int x,n;
+    cout<<"Enter a number: ";
+    cin>>n;
+    x= add(n);
+    cout<<x;
+}
+```
+
+15b
+```
+#include <iostream>
+#include <string>
+using namespace std;
+void rev(char *str)
+{
+    if (*str)
+    {
+        rev(str+1);
+        cout<<("%c",*str);
+
+    }
+
+}
+int main()
+{
+    char s[50];
+    cout<<"Enter a string: ";
+    cin>>s;
+    rev(s);
+}
+```
+
+
+
